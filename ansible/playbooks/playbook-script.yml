@@ -1,0 +1,29 @@
+---
+- hosts: jenkinsslave
+  
+  tasks:
+    - name: Install webserver ( nginx )
+      apt: name=nginx state=installed enabled=yes
+      copy: src=/var/www/html/index.html dest=/var/www/html/index.html
+      notify:
+      - restart nginx
+
+    - name: Install java to run jenkins builds
+      apt: name=openjdk-8-jdk state=installed
+
+    - name: Install python to run ansible tasks
+      apt: name=python state=installed
+
+    - name: Install telnet service
+      apt: name=telnet state=installed
+
+    - name: create directory for 
+      file: state=directory recurse=yes path=/home/ubuntu/Desktop/host_dir
+
+    - name: Adding new user
+      user: name=employee1 state=present generate_ssh_key=no
+
+
+    handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted

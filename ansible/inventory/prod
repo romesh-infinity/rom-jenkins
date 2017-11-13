@@ -1,0 +1,17 @@
+[frontend]
+12.12.4.179 ansible_ssh_user=deployer ansible_private_ssh_key=~/.ssh/keys/deployer ansible_sudo_pass=d3pl0y3r
+
+[mongodb]
+12.12.6.110 ansible_ssh_user=deployer ansible_private_ssh_key=~/.ssh/keys/deployer ansible_sudo_pass=d3pl0y3r
+
+[pump]
+12.12.4.154 ansible_ssh_user=deployer ansible_private_ssh_key=~/.ssh/keys/deployer ansible_sudo_pass=d3pl0y3r
+
+[backend]	
+12.12.4.38 ansible_ssh_user=deployer ansible_private_ssh_key=~/.ssh/keys/deployer ansible_sudo_pass=d3pl0y3r
+
+[prod:children]
+frontend
+backend
+mongodb
+pump
