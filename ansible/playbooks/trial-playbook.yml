@@ -7,7 +7,7 @@
     apt: update_cache=yes
   - name: Upgrade apt packages
     apt: upgrade=yes
-    notify:
+#    notify:
     - restart machine
 
   handlers:
