@@ -8,9 +8,8 @@
     apt: update_cache=yes
   - name: Upgrade apt packages
     apt: upgrade=yes
-    notify:
-    - restart machine
+    notify: restart machine
 
   handlers:
-  - name: rebooting machine
+  - name: restart machine
     shell: reboot now  
