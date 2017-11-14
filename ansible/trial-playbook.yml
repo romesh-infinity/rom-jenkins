@@ -1,0 +1,15 @@
+---
+- name: Bootstrap script
+  hosts: 172.31.100.64
+
+  tasks:
+  - name: Update apt cache
+    apt: update_cache=yes
+  - name: Upgrade apt packages
+    apt: upgrade=yes
+#    notify:
+#    - restart machine
+
+  handlers:
+  - name: rebooting machine
+    shell: reboot now  
