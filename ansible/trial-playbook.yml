@@ -6,10 +6,10 @@
   tasks:
   - name: Update apt cache
     apt: update_cache=yes
+    notify: restart machine
   - name: Upgrade apt packages
     apt: upgrade=yes
-    notify: restart machine
-
+    
   handlers:
   - name: restart machine
     command: /sbin/reboot/
