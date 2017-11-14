@@ -1,6 +1,6 @@
 ---
 - name: Bootstrap script
-  hosts: localhost
+  hosts: myserver
 
   tasks:
   - name: Update apt cache
