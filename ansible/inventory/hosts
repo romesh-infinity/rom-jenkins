@@ -1,10 +1,2 @@
-[master-server]
-172.31.12.188 ansible_ssh_user=jenkins
-
-[slave-server]
+[myserver]
 172.31.100.64 ansible_ssh_user=jenkins
-
-
-[hosts:children]
-master-server
-slave-server
