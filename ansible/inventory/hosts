@@ -1,0 +1,10 @@
+[master-server]
+12.12.4.179 ansible_ssh_user=jenkins
+
+[slave-server]
+12.12.6.110 ansible_ssh_user=deployer ansible_private_ssh_key=~/.ssh/keys/deployer ansible_sudo_pass=d3pl0y3r
+
+
+[hosts:children]
+master-server
+slave-server
