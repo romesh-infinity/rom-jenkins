@@ -1,5 +1,5 @@
 [master-server]
-172.31.100.64 ansible_ssh_user=jenkins
+172.31.12.188 ansible_ssh_user=jenkins
 
 [slave-server]
 172.31.100.64 ansible_ssh_user=jenkins
