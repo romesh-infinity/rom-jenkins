@@ -12,4 +12,4 @@
 
   handlers:
   - name: restart machine
-    shell: reboot now  
+    command: /sbin/reboot/
