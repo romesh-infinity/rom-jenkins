@@ -1,6 +1,6 @@
 ---
 - name: Bootstrap script
-  hosts: 172.31.100.64
+  hosts: all
 
   tasks:
   - name: Update apt cache
