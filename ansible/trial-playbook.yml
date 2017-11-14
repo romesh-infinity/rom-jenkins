@@ -1,6 +1,7 @@
 ---
 - name: Bootstrap script
   hosts: myserver
+  become: yes
 
   tasks:
   - name: Update apt cache
