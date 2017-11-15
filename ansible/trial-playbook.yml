@@ -6,7 +6,7 @@
   tasks:
   - name: Update apt cache
     apt: update_cache=yes
-    notify: restart machine
+#    notify: restart machine
   - name: Upgrade apt packages
     apt: upgrade=yes
     
